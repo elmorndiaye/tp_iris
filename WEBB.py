@@ -25,7 +25,7 @@ st.write(
 
 # Afficher une seule image avec les 3 types de fleurs
 image = Image.open("image.png")  # ← mets ton image dans un dossier 'images'
-st.image(image, caption="Les trois espèces d'Iris : Setosa, Versicolor et Virginica", use_column_width=True)
+st.image(image, caption="Les trois espèces d'Iris : Setosa, Versicolor et Virginica", use_container_width=True)
 
 st.divider()  # ligne de séparation
 
@@ -41,3 +41,4 @@ if st.button("🔍 Prédire l'espèce"):
     input_data = np.array([[sepal_length, sepal_width, petal_length, petal_width]])
     prediction = model_NB.predict(input_data)
     st.success(f"🌿 Espèce prédite : **{prediction[0]}**")
+

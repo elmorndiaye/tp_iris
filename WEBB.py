@@ -7,7 +7,7 @@ from PIL import Image
 with open("model_NB.pkl", "rb") as f:
     model_NB = pickle.load(f)
 
-st.title("🌸 Prédiction d'espèce de fleur (Naïve Bayes)")
+st.title("🌸 Prédiction d'espèce de fleur ")
 
 # --- Présentation avant la prédiction ---
 st.header("Présentation des espèces d'Iris")
@@ -41,4 +41,5 @@ if st.button("🔍 Prédire l'espèce"):
     input_data = np.array([[sepal_length, sepal_width, petal_length, petal_width]])
     prediction = model_NB.predict(input_data)
     st.success(f"🌿 Espèce prédite : **{prediction[0]}**")
+
 
